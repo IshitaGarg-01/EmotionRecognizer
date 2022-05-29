@@ -101,11 +101,12 @@ We had to cut down to 4 emotions-`happy`, `sad`, `angry` , `neutral`. The final 
 <img width="685" alt="Screenshot 2022-05-27 at 8 35 12 PM" src="https://user-images.githubusercontent.com/79802180/170726697-93249744-3f3a-4888-953d-7a7c9bec6aff.png">
 
 # Setup :
-* Clone the repository
+* Clone the repository 
 * Go in the project repository and create a virtual environment using `python 3.7` and `tensorflow` in terminal(you can use conda create -n foo python=3.7 tensorflow)
 * Install the required dependencies using `pip3 install -r requirements.txt` or `pip install -r requirements.txt` whichever works
 * All set! Run `python app.py` or `python3 app.py` whichever works and open the `server link` generated in the terminal to test the server!
 * I had updated my Pillow to 9.0.1 for preventing vulnerability issues and it was working fine for my webapp but if and only if it causes any mismatch dependency error,use Pillow==8.0.1
+* Try to run it on Windows as on other OS, it might cause some dependency issue or some extra requirements which you might need to configure yourself
 
 # References :
 * [Face Recognition](https://pypi.org/project/face-recognition/)
