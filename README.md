@@ -22,11 +22,10 @@ Further there are 2 alternatives-
 <img width="1302" alt="Screenshot 2022-05-27 at 5 02 01 PM" src="https://user-images.githubusercontent.com/79802180/170691430-6468820f-f4b1-4225-8e49-6bb615e89ce0.png">
 
 # System Architecture :
-Firstly the weights of the trained model are sent to the flask database.
+Firstly the weights of the trained model are sent to the flask server.
 The site provides us with 2 flexible features-Emotion button and Emotion with Name button.  
 On pressing Emotion with Name button it directs us to a form page asking user to upload image and their name.This image is then saved in Flask database with name of file as name of user.  
-file as name of user.
-On submitting it takes us to the Emotion with Name page which with the help of a database in flask recognizes the person and simultaneously takes the weights from flask to predict the emotion of the person.  
+On submitting it takes us to the Emotion with Name page which with the help of images in the flask database in flask recognizes the person and simultaneously takes the weights from flask to predict the emotion of the person.  
 On pressing the Emotion button it takes the weights from flask to predict the emotion of person.
 
 ![System_Architecture](https://user-images.githubusercontent.com/79802180/170697555-56f609cf-56f3-4d5b-b489-46960c79f5ed.jpg)
@@ -35,7 +34,7 @@ On pressing the Emotion button it takes the weights from flask to predict the em
 
 ## UI UX of Web-App :
 In this section you can see the UI/UX of my web app.The colours used are based on my knowledge of colour psychology.  
-The primary coolour is blue because "Blue" represents 'trust' , 'secure' , 'faith' , 'responsibility' .Thus this app provides trustworthy information and the users can trust this website and its E-Care's responsiblity to look after their users and make them feel secure and safe.  
+The primary colour is blue because "Blue" represents 'trust' , 'secure' , 'faith' , 'responsibility' .Thus this app provides trustworthy information and the users can trust this website and its E-Care's responsiblity to look after their users and make them feel secure and safe.  
 The font used is "Lato" . It's a San-Serif Font signifying something minimal,friendly and modern, just the message which I wanted to convey through my website .  
 The name of the website "E-Care" also holds an internal significance .The 'E' in it stands for 'Emotion' and 'Online' i.e we aim to assist the users from being distant from them.
 
