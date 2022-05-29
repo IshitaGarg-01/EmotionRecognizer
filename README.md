@@ -102,7 +102,7 @@ We had to cut down to 4 emotions-`happy`, `sad`, `angry` , `neutral`. The final 
 
 # Setup :
 * Clone the repository
-* Go in the project repository and create a virtual environment using `python 3.7` in terminal
+* Go in the project repository and create a virtual environment using `python 3.7` and `tensorflow` in terminal(you can use conda create -n foo python=3.7 tensorflow)
 * Install the required dependencies using `pip3 install -r requirements.txt`
 * All set! Run `python app.py`/`python3 app.py` and open the `server link` generated in the terminal to test the server!
 * I had updated my Pillow to 9.0.1 for preventing vulnerability issues and it was working fine for my webapp but if and only if it causes any mismatch dependency error,use Pillow==8.0.1
