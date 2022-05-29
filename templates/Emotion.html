@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- href tag to link CSS code to HTML via flask -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" />
+
+  <!-- script tag to link JS code to HTML via flask -->
+  <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
+
+  <!-- Including Bootstrap's CSS and JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <title>E-Care</title>
+</head>
+
+<!-- Start of main body -->
+
+<body>
+
+  <!-- Navbar of website -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">E-Care</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="http://127.0.0.1:5000/" role="link"
+              aria-disabled="true">Home</a>
+          </li>
+          <li class="nav-item">
+            <!-- This link directs the user to information about me i.e about us-->
+            <a class="nav-link text-white " href="http://127.0.0.1:5000/#C6" role="link" aria-disabled="true">About</a>
+          </li>
+          <li class="nav-item">
+            <!-- This link directs the user to the contact-me section -->
+            <a class="nav-link text-white" href="#C7">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br /><br /><br />
+
+  <!-- This section of code shows up the person's video using Opencv library and displays the name in addition to Emotion -->
+  <div class="video-capture">
+    <div class="window">
+      <!-- passing the rendered video back to img tag -->
+      <img src="{{ url_for('video_feed_emotion') }}" alt="" width="100%" />
+    </div>
+    <div class="window-content">
+      <div class="window-content">
+        <!-- If the user wants to see any suggestions regarding their emotion to lift up their mood they can click on the following buttons -->
+        <h4>Which of the following matches your mood ?</h4>
+      </div>
+    </div>
+
+    <!-- Buttons corresponding to Happy , Sad , Angry and Neutral emotion which will direct the person to the corresponding pop-up -->
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group me-3 btn-group-lg" role="group" aria-label="First group">
+        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Happy">
+          Happy
+        </button>
+      </div>
+      <div class="btn-group me-3 btn-group-lg" role="group" aria-label="Second group">
+        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#Sad">
+          Sad
+        </button>
+      </div>
+      <div class="btn-group me-3 btn-group-lg" role="group" aria-label="Third group">
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#Angry">
+          Angry
+        </button>
+      </div>
+      <div class="btn-group me-3 btn-group-lg" role="group" aria-label="Fourth group">
+        <button type="button" class="btn btn-outline-primary neutral" data-bs-toggle="modal" data-bs-target="#Neutral">
+          Neutral
+        </button>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <br /><br /><br />
+
+  <!-- This section contains the footer of the web app.Those who wish to contact me can contact me using the following details -->
+  <footer id="C7">
+    <div class="container_footer">
+      <div class="social_links">
+        <a href="https://www.facebook.com/ishita.garg.982845"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://instagram.com/_ishigarg/"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/ishita-garg-9961b0219"><i class="fab fa-linkedin-in fa-2x"></i></a>
+        <a href="mailto:mailigarg2001@gmail.com subject=feedback"><i class="fab fa-envelope fa-2x"></i></a>
+      </div>
+      <div class="finish">
+        <p>© Emotional_Recogniser, All rights reserved</p>
+        <p>Designed with love by <strong>Ishita Garg</strong></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- 
+    This sections contains 4 modals for 4 pop-up boxes corresponding to every emotion giving you your emotion and lifting up your mood -->
+
+  <!-- Modal for Happy Emotion-->
+
+  <div class="modal fade" id="Happy" tabindex="-1" aria-labelledby="emotionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="static/happy.png" class="card-img-top" />
+          <h5 class="card-title modal-title">Hey,your emotion is HAPPY</h5>
+          <p class="card-text">
+            Good going mate,spread the happiness around !
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal for Sad Emotion-->
+  <div class="modal fade" id="Sad" tabindex="-1" aria-labelledby="emotionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="static/sad.jpg" class="card-img-top" />
+          <h5 class="card-title modal-title">Hey,your emotion is SAD</h5>
+          <p class="card-text">Here’s a joke to lift your mood-What happens to an illegaly parked dog ? It gets toad
+            away.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal for Angry Emotion-->
+  <div class="modal fade" id="Angry" tabindex="-1" aria-labelledby="emotionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="static/angry.jpg" class="card-img-top" />
+          <h5 class="card-title modal-title">Hey,your emotion is ANGER</h5>
+          <p class="card-text">
+            Calm down , take a chill pill. You know anger blows out the lamp
+            of the mind.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal for Neutral Emotion-->
+  <div class="modal fade" id="Neutral" tabindex="-1" aria-labelledby="emotionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="static/neutral.jpg" class="card-img-top" />
+          <h5 class="card-title modal-title">Hey,your emotion is NEUTRAL</h5>
+          <p class="card-text">Good going , Live life king size !!!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+<!-- End of file -->

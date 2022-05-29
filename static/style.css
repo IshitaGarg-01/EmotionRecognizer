@@ -1,0 +1,322 @@
+/* CSS of the Emotion Detection application */
+
+/* Importing Lato font in the website */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Navbar CSS */
+.container-fluid {
+  background-color: #2e354e;
+  padding-top: 0;
+}
+.navbar {
+  --bs-navbar-padding-y: 0 !important;
+  --bs-navbar-color: white !important;
+}
+ul li {
+  margin: 2px 20px 2px 20px;
+}
+ul li a:hover {
+  color: black;
+  background-color: #bec9d7;
+  border-radius: 2px;
+}
+.navbar-collapse {
+  color: white;
+}
+.navbar-brand {
+  padding-left: 20px !important;
+}
+.navbar-toggler {
+  background-color: white !important;
+  border: none !important;
+}
+/* Navbar CSS ends */
+
+/* Home Page CSS */
+
+/* Adding border radius and shadow to the div enclosing the ilustration and Emotion Detection on home page */
+.main-content {
+  box-shadow: 4px 5px 10px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+.main-content p {
+  color: black !important;
+  text-align: justify;
+}
+
+/* Adding a horizontal line after Detect Emotion line */
+hr {
+  border: 1px solid #2e354e !important;
+  width: 40% !important;
+  opacity: 1 !important;
+}
+
+/* Detect emotion margin */
+.row {
+  --bs-gutter-x: -3.5rem !important;
+}
+
+/* CSS of emotion and emotion with name buttons */
+.btn-color {
+  color: #fa706a !important;
+}
+.btn-color:hover {
+  color: white !important;
+  background-color: #fa706a !important;
+}
+a.btn-outline-primary {
+  --bs-btn-border-color: #fa706a !important;
+  --bs-btn-hover-border-color: #fa706a !important;
+  --bs-btn-color: #fa706a !important;
+  --bs-btn-border-color: #fa706a !important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #fa706a !important;
+  --bs-btn-hover-border-color: #fa706a !important;
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #fa706a !important;
+  --bs-btn-active-border-color: #fa706a !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fa706a !important;
+  --bs-btn-disabled-bg: transparent;
+  --bs-gradient: none;
+}
+
+/* CSS for the About Us section */
+.about {
+  height: 90vh;
+  width: 100%;
+  background-color: #bec9d7;
+}
+.container_about p {
+  color: black !important;
+  letter-spacing: 0.7px !important;
+  text-align: justify !important;
+}
+img {
+  width: 400px;
+  height: 400px;
+  padding: 1rem;
+  float: left;
+}
+
+div.container_about {
+  background-color: #bec9d7;
+}
+
+/* Adding side vertical rectangle to About Us page */
+.box {
+  background-color: #334797;
+  position: absolute;
+  width: 40px !important;
+  height: 360px;
+  top: 800px;
+  right: 0;
+}
+
+/* Main Page CSS ends */
+
+/* CSS for emotion and emotion with name page */
+
+/* For outline of sad button */
+.btn-outline-info {
+  --bs-btn-color: #824c71 !important;
+  --bs-btn-border-color: #824c71 !important;
+  --bs-btn-hover-color: white !important;
+  --bs-btn-hover-bg: #824c71 !important;
+  --bs-btn-hover-border-color: #824c71 !important;
+  --bs-btn-focus-shadow-rgb: 13, 202, 240;
+  --bs-btn-active-color: white !important;
+  --bs-btn-active-bg: #824c71 !important;
+  --bs-btn-active-border-color: #824c71 !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #824c71 !important;
+  --bs-btn-disabled-bg: transparent;
+  --bs-gradient: none;
+}
+
+.btn-outline-primary,
+.neutral {
+  --bs-btn-border-color: #0d6efd !important;
+  --bs-btn-hover-border-color: #0d6efd !important;
+}
+
+/* Center aligning all the buttons on Emotion and Emotion_Name page */
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center !important;
+}
+
+/* CSS for video showing div of Emotion and Emotion_Name page */
+.window {
+  border: 4px solid #334797;
+  width: 405px;
+  height: 405px;
+  margin: auto;
+}
+.window-content {
+  text-align: center;
+  margin: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+/* CSS for form page which asks for user's details */
+.form-title {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 0rem;
+}
+.text-muted {
+  text-align: center;
+}
+
+/* This div encloses the form of form page */
+.form-box {
+  margin-top: 1.5rem !important;
+  height: 60vh;
+  background-color: #f8f8f8;
+  border-radius: 36px !important;
+}
+
+/* CSS properties for the 'Name' label of form page */
+.form-content {
+  font-size: 20px;
+  margin: 3rem 2rem 2rem 0rem;
+  padding-left: 7rem;
+}
+.form-control {
+  margin-top: 0.7rem;
+  border: 1px solid black !important;
+  border-radius: 0.5rem !important;
+  width: 60% !important;
+}
+
+/* CSS properties for the 'Upload Image' label of form page */
+.form-control-file {
+  font-size: 14px;
+  margin-top: 0.8rem;
+}
+.form-group label {
+  display: block;
+}
+.form-group p {
+  font-size: 12px !important;
+}
+.img {
+  font-size: 20px;
+  padding: 3rem;
+  padding-top: 0.4rem;
+  padding-left: 7rem;
+}
+
+/* Submit button to submit the form page and redirect it to another HTML page */
+.submit .btn {
+  --bs-btn-padding-x: 4.75rem;
+}
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 140px;
+}
+
+/* CSS properties for the illustration of image on form page */
+.form_image img {
+  width: 550px !important;
+  height: 390px !important;
+  padding: 0rem !important;
+}
+
+.contain {
+  width: 100vw;
+}
+
+/* CSS for Pop-up box */
+.card-img-top {
+  padding: 0;
+  height: 200px;
+}
+#Happy {
+  --bs-modal-bg: #ffa401 !important;
+}
+#Neutral {
+  --bs-modal-bg: #334797 !important;
+}
+#Angry {
+  --bs-modal-bg: #d12c31 !important;
+}
+#Sad {
+  --bs-modal-bg: #824c71 !important;
+}
+.modal-content {
+  background-color: var(--bs-modal-bg) !important;
+  border-radius: 20px;
+  width: 80% !important;
+  border: none;
+}
+.modal-title {
+  font-weight: 400 !important;
+  margin-top: 1rem;
+  margin-bottom: 5px;
+}
+.modal-body h5,
+p {
+  color: white !important;
+}
+.modal-body h5 {
+  font-weight: normal !important;
+}
+.pop-up p {
+  font-weight: normal !important;
+}
+/* CSS for Pop-up box ends */
+
+/* CSS for footer of website */
+.container_footer {
+  width: 100%;
+  margin: auto;
+  height: 180px;
+  background-color: #334797;
+}
+.footer {
+  background-color: #334797;
+  position: absolute;
+}
+
+/* CSS for social media icons */
+.social_links {
+  display: flex;
+  justify-content: center;
+}
+.social_links a {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #334797;
+  margin: 30px 0px 0px 0px;
+  height: 60px;
+  width: 30px;
+  color: white;
+}
+.finish {
+  color: #bec9d7;
+  margin-top: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  text-align: center;
+}
+/* CSS for footer of website ends */
